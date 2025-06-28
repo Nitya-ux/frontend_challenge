@@ -1,0 +1,86 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, black, grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  width: 320px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.card::before {
+  top: 0;
+  right: 0;
+}
+
+.card::after {
+  bottom: 0;
+  left: 0;
+  background: biege;
+}
+
+.card * {
+  position: relative;
+  z-index: 1;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.roll {
+  color: black;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.roll span {
+  font-weight: 600;
+}
+
+.branch {
+  display: inline-block;
+  background: linear-gradient(to right, black, grey);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.year, .email {
+  color: black;
+  margin: 5px 0;
+}
+
+.college {
+  margin-top: 15px;
+  color: black;
+  font-weight: bold;
+}
